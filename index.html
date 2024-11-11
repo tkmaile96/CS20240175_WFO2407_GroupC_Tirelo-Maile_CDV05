@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,12 +33,12 @@
 
             <!--NavBar-->
             <nav class="hidden md:flex space-x-8">
-                <a href="#" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>Skills</a>
-                <a href="#" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>About Me</a>
-                <a href="#" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>My Projects</a>
-                <a href="#" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>Contacts</a>
+                <a href="#My_SKills" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>Skills</a>
+                <a href="#About_Me" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>About Me</a>
+                <a href="#My_Projects" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>My Projects</a>
+                <a href="#Contact_Me" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>Contacts</a>
             </nav>
-            <button class="hidden text-teal-300" id="Menu-toggle">
+            <button class="md:hidden text-teal-300" id="Menu-toggle">
                 <svg>
                     fill="none"
                 viewBox="0 0 24 24"
@@ -67,35 +67,41 @@
                 </defs>
                 </svg>
             </button>
+
+            <!--Sidebar-->
+        <aside class="fixed inset-0 bg-gray-800 w-full h-screen hidden flex-col space-y-8 p-8" id="sidebar">
+            <a href="#My_Skills" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>Skills</a>
+            <a href="#About_Me" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>About Me</a>
+            <a href="#My_Projects" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>My Projects</a>
+            <a href="#Contact_Me" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>Contacts</a>
+        </aside>
         </header>
 
-        <!--Sidebar-->
-        <aside class="fixed inset-0 bg-gray-800 w-full h-screen hidden flex-col space-y-8 p-8 md-hidden">
-            <a href="#" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>Skills</a>
-            <a href="#" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>About Me</a>
-            <a href="#" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>My Projects</a>
-            <a href="#" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>Contacts</a>
-        </aside>
+        
 
         <!--Introduction Section-->
         <section class="flex flex-col md:flex-row items-center justify-center h-screen bg-gray-800 pt-12">
             <div class="p-6 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
                 <div class="relative">
                     <img src="/Images/TK.png" alt="profile image" class="h-64 w-auto rounded-lg border-2 border-gray-400 shadow-lg">
-                    <div class="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
+                    <div class="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
                 </div>
                 <div class="text-center md:text-left">
                     <h2 class="text-4xl text-teal-300 font-bold">Hello, I'm Tirelo Maile</h2>
                 <p class="text-2xl text-white-400">A Front-End Dev</p>
                 <p class="italic text-white-400">Welcome to my portfolio!</p>
-                <button class="bg-teal-300 text-gray-800 font-bold px-6 py-2 mt-4 rounded hover:bg-teal-400">Resume</button>
-                <button class="bg-teal-300 text-gray-800 font-bold px-6 py-2 mt-4 rounded hover:bg-teal-400">Contacts</button>
+                <button class="bg-teal-300 text-gray-800 font-bold px-6 py-2 mt-4 rounded hover:bg-teal-400">
+                    <a href="https://docs.google.com/document/d/1hcykoUP3M-uy-tp0R5DgSEHsCt1lyZ4ae4iHOhqigAM/edit?usp=sharing" target="_blank">Resume</a>
+                </button>
+                <button class="bg-teal-300 text-gray-800 font-bold px-6 py-2 mt-4 rounded hover:bg-teal-400">
+                    <a href="#Contact_Me">Contacts</a>
+                </button>
                 </div>
             </div>
         </section>
 
         <!--Skills Section-->
-        <section class=" flex flex-col items-center justify-centerrelative p-6 sm:p-8 lg:p-12 bg-gray-900 text-teal-300">
+        <section class=" flex flex-col items-center justify-centerrelative p-6 sm:p-8 lg:p-12 bg-gray-900 text-teal-300" id="My_SKills">
             <h2 class="text-3xl font-bold text-teal-300 underline mb-4">My Skills</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-3xl">
             <!-- Skill 1 -->
@@ -104,77 +110,77 @@
                 <span class="text-white font-semibold">HTML</span>
             </div>
             <!-- Skill 2 -->
-            <div class="bg-gradient-to-r from-blue-400 to-blue-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-css3-alt mb-3"></i>
                 <span class="text-white font-semibold">CSS</span>
             </div>
             <!-- Skill 3 -->
-            <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">JavaScript</span>
             </div>
             <!-- Skill 4 -->
-            <div class="bg-gradient-to-r from-red-400 to-red-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">Handlebars</span>
             </div>
             <!-- Skill 5 -->
-            <div class="bg-gradient-to-r from-pink-400 to-pink-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">Typescript</span>
             </div>
             <!-- Skill 6 -->
-            <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">Wordpress</span>
             </div>
             <!-- Skill 7 -->
-            <div class="bg-gradient-to-r from-lime-400 to-lime-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">Bootstrap</span>
             </div>
             <!-- Skill 8 -->
-            <div class="bg-gradient-to-r from-pink-400 to-pink-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">TailwindCss</span>
             </div>
             <!-- Skill 9 -->
-            <div class="bg-gradient-to-r from-tomato-400 to-tomato-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">SASS</span>
             </div>
             <!-- Skill 10 -->
-            <div class="bg-gradient-to-r from-green-400 to-green-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">React.JS</span>
             </div>
             <!-- Skill 11 -->
-            <div class="bg-gradient-to-r from-green-400 to-green-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">Redux</span>
             </div>
             <!-- Skill 12 -->
-            <div class="bg-gradient-to-r from-green-400 to-green-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">NodeJS</span>
             </div>
             <!-- Skill 13 -->
-            <div class="bg-gradient-to-r from-green-400 to-green-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">Git</span>
             </div>
             <!-- Skill 14 -->
-            <div class="bg-gradient-to-r from-green-400 to-green-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">Github</span>
             </div>
             <!-- Skill 15 -->
-            <div class="bg-gradient-to-r from-green-400 to-green-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">Firebase</span>
             </div>
             <!-- Skill 16 -->
-            <div class="bg-gradient-to-r from-green-400 to-green-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center">
                 <i class="text-white text-3xl fab fa-js mb-3"></i>
                 <span class="text-white font-semibold">Netlify</span>
             </div>
@@ -182,7 +188,7 @@
         </section>
 
         <!--About Me Section-->
-        <section class="flex flex-col md:flex-row items-center justify-center h-screen p-8 bg-gray-800">
+        <section class="flex flex-col md:flex-row items-center justify-center h-screen p-8 bg-gray-800" id="About_Me">
             <div class="md:w-1/2 md:text-left text-center space-y-4">
                 <h2 class="text-3xl font-bold text-teal-300">About Me</h2>
                 <p class="text-gray-300 leading-relaxed">
@@ -203,29 +209,29 @@
         </section>
 
          <!-- Projects Section -->
-    <section class="h-screen flex flex-col items-center bg-gray-900 p-8">
+    <section class="h-screen flex flex-col items-center bg-gray-900 p-8" id="My_Projects">
         <h2 class="text-3xl font-bold text-teal-300 underline mb-4">My Projects</h2>
-        <div class="project-tile-section grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-4xl items-center jusstify-between">
+        <div class="project-tile-section grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 max-w-4xl items-center jusstify-between">
             <!--Project 1 -->
             <div class="bg-gray-700 p-6 rounded shadow-lg">
                 <h3 class="text-lg font-bold text-teal-300 mb-2">Memory Game</h3>
                 <p class="text-gray-300 mt-2">This is a timed, Naruto-themed memory game with a countdown timer and win or lose conditions</p>
-                <a href="" class="block mt-4 text-teal-400 hover:text-teal-300">Live App</a>
-                <a href="" class="block mt-4 text-teal-400 hover:text-teal-300">Repository</a>
+                <a href="https://tkmaile96.github.io/Memory-Game/" target="_blank" class="block mt-4 text-teal-400 hover:text-teal-300">Live App</a>
+                <a href="https://github.com/tkmaile96/Memory-Game.git" target="_blank" class="block mt-4 text-teal-400 hover:text-teal-300">Repository</a>
             </div>
             <!--Project 2-->
             <div class="bg-gray-700 p-6 rounded shadow-lg">
                 <h3 class="text-lg font-bold text-teal-300 mb-2">Agile Board</h3>
                 <p class="text-gray-300 mt-2">This application is a task management tool designed to help users visually organize and track tasks through a Kanban board.</p>
-                <a href="" class="block mt-4 text-teal-400 hover:text-teal-300">Live App</a>
-                <a href="" class="block mt-4 text-teal-400 hover:text-teal-300">Repository</a>
+                <a href="https://tkmaile96.github.io/Agile-Board/"  target="_blank" class="block mt-4 text-teal-400 hover:text-teal-300">Live App</a>
+                <a href="https://github.com/tkmaile96/Agile-Board.git" target="_blank" class="block mt-4 text-teal-400 hover:text-teal-300">Repository</a>
             </div>
 
         </div>
     </section>
 
      <!-- Contact Section -->
-     <section class=" flex flex-col items-center justify-center bg-gray-800 p-8">
+     <section class=" flex flex-col items-center justify-center bg-gray-800 p-8" id="Contact_Me">
         <h2 class="text-3xl font-bold text-teal-300 underline mb-4">Contact Me</h2>
         <form class="flex flex-col space-y-4 w-full max-w-md">
             <div class="flex flex-row space-x-4 w-full max-w-md">
