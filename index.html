@@ -27,64 +27,39 @@
 <body>
     <!--Wrapper-->
     <div class="text-gray-300 bg-gray-800 font-sans min-h-screen">
-
-        <!--Header-->
-        <header class="fixed top-0 w-full h-12 z-50 bg-gray-800  border-b-2 border-teal-300 flex justify-between items-center px-4">
-            <div class="text-teal-300 font-bold text-xl"><a href="#"><Span><i class='bx bxs-home'></i></Span>TK Maile</div></a>
-            
-
-            <!--NavBar-->
-            <nav class="hidden md:flex space-x-8">
-
-                <a href="#About_Me" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>About Me</a>
-                <a href="#My_Projects" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>My Projects</a>
-                <a href="#Contact_Me" class="text-teal-300 hover:text-gray-200"><span class="text-[#fff] hover:text-teal">#</span>Contacts</a>
-            </nav>
-            <button class="md:hidden text-teal-300" id="Menu-toggle">
-                <svg>
-                    fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                class="h-6 w-6"
-                fill="none"
-                >
-                <g clip-path="url(#clip0_429_11066)">
-                  <path
-                    d="M3 6.00092H21M3 12.0009H21M3 18.0009H21"
-                    stroke="#292929"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_429_11066">
-                    <rect
-                      width="24"
-                      height="24"
-                      fill="white"
-                      transform="translate(0 0.000915527)"
-                    />
-                  </clipPath>
-                </defs>
-                </svg>
-            </button>
-        </header>
+         <!-- Navbar -->
+  <header class=" shadow  fixed w-full z-50 bg-gray-800 border-b-2 border-teal-300">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-teal-300"><a href="#"><i class='bx bx-home' ></i>TK Maile</a></h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#About_Me" class="text-teal-200 hover:text-gray-200"><span class="text-white">#</span>About</a>
+        <a href="#My_Skills" class="text-teal-200 hover:text-gray-200"><span class="text-white">#</span>Skills</a>
+        <a href="#My_Projects" class="text-teal-200 hover:text-gray-200"><span class="text-white">#</span>Projects</a>
+        <a href="#Contact_me" class="text-teal-200 hover:text-gray-200"><span class="text-white">#</span>Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden p-2 text-teal-100">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-gray-800 shadow md:hidden">
+      <a href="#home" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>Home</a>
+      <a href="#About_Me" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>About</a>
+      <a href="#My_Skills" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>Skills</a>
+      <a href="#My_Projects" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>Projects</a>
+      <a href="#Contact_Me" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>Contact</a>
+    </div>
+  </header>
+       
         
-    <!--Sidebar-->
-    <aside class="fixed inset-0 bg-gray-800 w-full h-screen hidden flex-col space-y-8 p-8" id="sidebar">
-  
-        <a href="#About_Me" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>About Me</a>
-        <a href="#My_Projects" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>My Projects</a>
-        <a href="#Contact_Me" class="text-gray-300 hover:text-teal"><span class="text-[#fff]">#</span>Contacts</a>
-    </aside>
-
         <!--Introduction Section-->
         <section class="flex flex-col md:flex-row items-center justify-center h-screen bg-gray-800 pt-12">
             <div class="p-6 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
                 <div class="relative">
                     <img src="/Images/TK.png" alt="profile image" class="h-64 w-auto rounded-lg border-2 border-gray-400 shadow-lg">
-                    <div class="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
+                   
                 </div>
                 <div class="text-center md:text-left z-10">
                     <h2 class="text-4xl text-teal-300 font-bold">Hello, I'm Tirelo Maile</h2>
@@ -122,7 +97,8 @@
                     <p class="text-gray-300 leading-relaxed">
                         I am a motivated and proactive individual with a foundation in software development, always eager to deepen my knowledge and skills in the field.
                         My interest in how web applications, Mobile applications are programmed led me to explore coding, where I continue to develop my expertise
-                        and learn new technologies. I look forward to collaborating with others as I progress in this journey. <br>
+                        and learn new technologies.I love bringing ideas to life through
+                        code and solving real-world problems with elegant solutions. I look forward to collaborating with others as I progress in this journey. <br>
                         In addition to programming, I have a background as a teacher and tutor, specializing in mathematics and English.
                         Outside of work, I enjoy watching football, Movies and anime.
                     </p>
@@ -177,7 +153,7 @@
 
         </div>
     </section>
-
+   
     <!-- Contact Section -->
 <section class="flex flex-col items-center justify-center bg-gray-800 p-8" id="Contact_Me">
     <h2 class="text-6xl font-bold text-teal-300 underline mb-4">Contact Me</h2>
