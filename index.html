@@ -44,12 +44,12 @@
       </button>
     </div>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden bg-gray-800 shadow md:hidden">
-      <a href="#home" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>Home</a>
-      <a href="#About_Me" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>About</a>
-      <a href="#My_Skills" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>Skills</a>
-      <a href="#My_Projects" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>Projects</a>
-      <a href="#Contact_me" class="block px-4 py-2 text-teal-300 hover:bg-teal-700"><span class="text-white">#</span>Contact</a>
+    <div id="mobile-menu" class="hidden bg-gray-800 shadow h-screen :hidden">
+      <a href="#" class="block px-4 py-2 text-teal-300 text-center text-2xl hover:bg-teal-700"><span class="text-white">#</span>Home</a>
+      <a href="#About_Me" class="block px-4 py-2 text-teal-300 text-center text-2xl hover:bg-teal-700"><span class="text-white">#</span>About</a>
+      <a href="#My_Skills" class="block px-4 py-2 text-teal-300 text-center text-2xl hover:bg-teal-700"><span class="text-white">#</span>Skills</a>
+      <a href="#My_Projects" class="block px-4 py-2 text-teal-300 text-center text-2xl hover:bg-teal-700"><span class="text-white">#</span>Projects</a>
+      <a href="#Contact_me" class="block px-4 py-2 text-teal-300 text-center text-2xl hover:bg-teal-700"><span class="text-white">#</span>Contact</a>
     </div>
   </header>
        
@@ -74,7 +74,7 @@
 
                  <!-- Social Links -->
             <div class="flex space-x-4 mt-4 justify-center md:justify-start">
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BZ%2FQUXjndQISE%2FaHQzvNwBg%3D%3D" target="_blank" class="text-blue-600 hover:text-teal-400" aria-label="LinkedIn Profile">
+                <a href="https://www.linkedin.com/in/tirelo-kgotatso-maile-06a980245/edit/intro/?profileFormEntryPoint=PROFILE_SECTION&amp;lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BSBics1WwTYmafOWFDM565g%3D%3D" target="_blank" class="text-blue-600 hover:text-teal-400" aria-label="LinkedIn Profile">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M4.983 3.5c0-1.355-1.1-2.5-2.484-2.5C1.1 1 0 2.145 0 3.5s1.1 2.5 2.499 2.5c1.381 0 2.484-1.145 2.484-2.5zM0 24h4.965V8H0v16zM7.781 8h4.657v2.293h.065c.653-1.239 2.253-2.293 4.621-2.293 4.946 0 5.876 3.17 5.876 7.293V24h-4.964v-7.965c0-1.895-.033-4.33-2.637-4.33-2.638 0-3.043 2.057-3.043 4.182V24H7.781V8z"/>
                     </svg>
@@ -189,7 +189,7 @@
           </div>
         </div>
         <div class="bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
-          <img src="/Images/Add to Cart.png" alt="Project 1" class="rounded-t-lg">
+          <img src="/Images/Agile Board.png" alt="Project 2" class="rounded-t-lg">
           <div class="p-4 bg-gray-800">
             <h3 class="text-center text-xl font-semibold text-green-500">Agile Board</h3>
             <p class="text-gray-100 mt-2">This application is a task management tool designed to help users visually organize and track tasks through a Kanban board.</p>
@@ -198,12 +198,12 @@
           </div>
         </div>
         <div class="bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
-          <img src="/Images/city skyline.png" alt="Project 1" class="rounded-t-lg">
+          <img src="/Images/city skyline.png" alt="Project 3" class="rounded-t-lg">
           <div class="p-4 bg-gray-800">
             <h3 class="text-center text-xl font-semibold text-orange-500">City Skyliner</h3>
             <p class="text-gray-100 mt-2">A responsive City skylines project, where we switch between night and day in different screen sizes.</p>
-            <a href="#" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm font-medium">Live App</a>
-            <a href="#" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm font-medium">Repository</a>
+            <a href="https://tkmaile96.github.io/City-Skyline/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm font-medium">Live App</a>
+            <a href="https://github.com/tkmaile96/City-Skyline.git" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm font-medium">Repository</a>
           </div>
         </div>
         <!-- <div class="bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
@@ -258,12 +258,24 @@
   </section>
 
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = mobileMenu.querySelectorAll("a");
   
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      // Toggle the mobile menu visibility
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+  
+      // Close the menu when a link is clicked
+      mobileLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
     });
   </script>
+  
 </body>
 </html>
